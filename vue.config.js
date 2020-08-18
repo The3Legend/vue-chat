@@ -1,4 +1,4 @@
 module.exports = {
   runtimeCompiler: true,
-  publicPath:"./vue-chat/dist/",
+  publicPath: process.env.NODE_ENV === "production" ? "./vue-chat/dist/" : "/",
 };
