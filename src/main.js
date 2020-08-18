@@ -4,7 +4,6 @@ import store from "./store";
 import PubNubVue from "pubnub-vue";
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 
-
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 
@@ -41,11 +40,12 @@ function created() {
 }
 
 function fourCharID() {
-  let text = prompt("lol");
-  console.log(text);
-  return text;
+  let text = prompt("wath your nickname?");
+  while (text === null || !text.length) {
+    text = prompt("wath your nickname?");
+  }
+  return text
 }
-
 new Vue({
   el: "#app",
   store,
