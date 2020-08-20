@@ -1,4 +1,4 @@
 module.exports = {
   runtimeCompiler: true,
-  publicPath: "/appchat/dist/",
+  publicPath: "./vue-chat/dist/",
 };
