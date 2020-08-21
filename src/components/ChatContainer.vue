@@ -1,44 +1,44 @@
 <template>
-  <div class="chat-container">
-    <div class="heading">
-      <h1>{{title + '- User: ' + uuid }}</h1>
-    </div>
-    <div class="body">
-      <div class="table">
-        <chat-log></chat-log>
-        <message-input></message-input>
+    <div class="chat-container">
+      <div class="heading">
+        <h1>{{ title + "- User: " + uuid }}</h1>
+      </div>
+      <div class="body">
+        <div class="table">
+          <chat-log></chat-log>
+          <message-input></message-input>
+        </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
-  import ChatLog from '@/components/ChatLog';
-  import MessageInput from '@/components/MessageInput';
-  import {mapGetters} from 'vuex';
+import ChatLog from "@/components/ChatLog";
+import MessageInput from "@/components/MessageInput";
+import { mapGetters } from "vuex";
 
-  export default {
-    name: 'chat-container',
-    components: {
-      ChatLog,
-      MessageInput,
-    },
-    data() {
-      return {
-        title: 'Vue Chat ',
-      };
-    },
-    mounted() {
-      this.$pnSubscribe({
-         channels: ['vueChat'],
-      });
-    },
-    computed: {
+export default {
+  name: "chat-container",
+  components: {
+    ChatLog,
+    MessageInput,
+  },
+  data() {
+    return {
+      title: "Vue Chat ",
+    };
+  },
+  mounted() {
+    this.$pnSubscribe({
+      channels: ["vueChat"],
+    });
+  },
+  computed: {
     ...mapGetters({
-      uuid: 'getMyUuid',
+      uuid: "getMyUuid",
     }),
   },
-  };
+};
 </script>
 
 <style scoped>
@@ -52,15 +52,15 @@ h1 {
 
 .chat-container {
   display: table;
-  max-width: 50%;
-  min-width: 200px;
-  width: 50%;
-  height: 550px;
-  background-color: #FFFFFF;
-  border: solid 1px #BFBFBF;
+  min-width: 300px;
+  width: 30%;
+  height: 35em;
+  background-color: #ffffff;
+  border: solid 1px #bfbfbf;
   border-radius: 3px;
-  margin-top: 20px;
   opacity: 0.7;
+  margin-left: 40%;
+  margin: auto;
 
 }
 
@@ -69,7 +69,7 @@ h1 {
   width: 100%;
   height: 28px;
   text-align: center;
-  background-color: #4690FB;
+  background-color: #4690fb;
   border-radius: 3px 3px 0 0;
   -ms-user-select: none;
   user-select: none;
@@ -80,7 +80,6 @@ h1 {
   width: auto;
   height: inherit;
   overflow: hidden;
-
 }
 
 .table {
@@ -88,4 +87,6 @@ h1 {
   width: 100%;
   height: 100%;
 }
+
+
 </style>
