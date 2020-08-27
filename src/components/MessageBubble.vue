@@ -1,8 +1,9 @@
 <template>
   <div class="message-bubble" :class="me">
     <span class="from" :class="me">
-      <span>{{ uuid }}</span>
+      {{ uuid }}
     </span>
+    <br :class="me" />
     <span class="message-text">
       {{ text }}
       <span class="fontSize">{{ `${data.toLocaleTimeString()}` }}</span>
@@ -54,7 +55,6 @@ export default {
 
 .message-bubble.me .message-text {
   background-color: #9ec6f5;
-  padding: 7 px;
 }
 
 .from {
@@ -62,7 +62,7 @@ export default {
   margin: 4px;
   font-size: 14px;
   color: #9da7af;
-  padding: 5px;
+
 }
 
 .from.me {
