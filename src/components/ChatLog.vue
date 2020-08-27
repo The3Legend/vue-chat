@@ -1,5 +1,6 @@
 <template>
   <div class="chat-log" ref="chatLogContainer">
+        <h6 class="data">{{ data.toDateString() }}</h6>
     <message-bubble
       v-for="msg in vueChatMsg"
       :key="msg.id"
@@ -21,6 +22,7 @@ export default {
   data() {
     return {
       vueChatMsg: this.$pnGetMessage("vueChat"),
+      data:new Date(),
     };
   },
   watch: {
@@ -43,5 +45,9 @@ export default {
 
 .chat-log::-webkit-scrollbar {
   display: none;
+}
+
+h6{
+  font-size: 13px;
 }
 </style>

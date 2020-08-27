@@ -1,15 +1,12 @@
 <template>
   <div class="message-bubble" :class="me">
-    <div class="flex">
-      <div>
-        <span class="from" :class="me"><strong>{{ uuid }}</strong></span>
-      </div>
-         <div>
-        <b-avatar :size="24"></b-avatar>
-        <span>{{`${data.toLocaleString()}`}}</span>
-      </div>
-    </div>
-    <span class="message-text"> {{ text }}</span>
+    <span class="from" :class="me">
+      <span>{{ uuid }}</span>
+    </span>
+    <span class="message-text">
+      {{ text }}
+      <span class="fontSize">{{ `${data.toLocaleTimeString()}` }}</span>
+    </span>
   </div>
 </template>
 
@@ -28,7 +25,7 @@ export default {
   },
   data() {
     return {
-      data: new Date()
+      data: new Date(),
     };
   },
 };
@@ -57,13 +54,15 @@ export default {
 
 .message-bubble.me .message-text {
   background-color: #9ec6f5;
+  padding: 7 px;
 }
 
 .from {
   float: left;
   margin: 4px;
-  font-size: 10px;
+  font-size: 14px;
   color: #9da7af;
+  padding: 5px;
 }
 
 .from.me {
@@ -77,7 +76,7 @@ export default {
 .message-bubble.me br.me {
   display: none;
 }
-.flex {
-  display: flex;
+.fontSize {
+  font-size: 9px;
 }
 </style>

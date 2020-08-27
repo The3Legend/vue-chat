@@ -56,14 +56,14 @@ h1 {
   display: table;
   min-width: 300px;
   width: 30%;
-  height: 33em;
+  height: 30em;
   background-color: #ffffff;
   border: solid 1px #bfbfbf;
   border-radius: 3px;
-  opacity: 0.5;
   margin-left: 40%;
   margin: auto;
   margin-top: 30px;
+  opacity: 0.8;
 
 }
 
