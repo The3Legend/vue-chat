@@ -19,7 +19,7 @@ export default {
 
 <style>
 body {
-  background: url('../media/1.jpg');
+  background-image: url('./media/3.jpg');
   background-size: cover;
 
 }

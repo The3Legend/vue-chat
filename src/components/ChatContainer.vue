@@ -1,7 +1,7 @@
 <template>
     <div class="chat-container">
       <div class="heading">
-        <h1>{{"User: " + uuid }}</h1>
+        <h1>{{title + uuid }}</h1>
       </div>
       <div class="body">
         <div class="table">
@@ -25,7 +25,7 @@ export default {
   },
   data() {
     return {
-      title: "Vue Chat ",
+      title: "User: ",
     };
   },
   mounted() {
@@ -48,6 +48,8 @@ h1 {
   margin: 0;
   font-size: 20px;
   font-weight: normal;
+  color: bisque;
+
 }
 
 .chat-container {
@@ -58,7 +60,7 @@ h1 {
   background-color: #ffffff;
   border: solid 1px #bfbfbf;
   border-radius: 3px;
-  opacity: 0.7;
+  opacity: 0.5;
   margin-left: 40%;
   margin: auto;
   margin-top: 30px;
@@ -70,7 +72,7 @@ h1 {
   width: 100%;
   height: 28px;
   text-align: center;
-  background-color: #4690fb;
+  background-color: black;
   border-radius: 3px 3px 0 0;
   -ms-user-select: none;
   user-select: none;

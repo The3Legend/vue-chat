@@ -6,6 +6,7 @@
       </div>
          <div>
         <b-avatar :size="24"></b-avatar>
+        <span>{{`${data.toLocaleString()}`}}</span>
       </div>
     </div>
     <span class="message-text"> {{ text }}</span>
@@ -26,7 +27,9 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      data: new Date()
+    };
   },
 };
 </script>
