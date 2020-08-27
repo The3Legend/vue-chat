@@ -1,7 +1,7 @@
 <template>
     <div class="chat-container">
       <div class="heading">
-        <h1>{{ title + "- User: " + uuid }}</h1>
+        <h1>{{"User: " + uuid }}</h1>
       </div>
       <div class="body">
         <div class="table">
@@ -46,7 +46,7 @@ h1 {
   display: table-cell;
   vertical-align: middle;
   margin: 0;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: normal;
 }
 
@@ -54,13 +54,14 @@ h1 {
   display: table;
   min-width: 300px;
   width: 30%;
-  height: 35em;
+  height: 33em;
   background-color: #ffffff;
   border: solid 1px #bfbfbf;
   border-radius: 3px;
   opacity: 0.7;
   margin-left: 40%;
   margin: auto;
+  margin-top: 30px;
 
 }
 
